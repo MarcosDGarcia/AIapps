@@ -118,6 +118,7 @@ function populateBoard() {
 
 function checkSolution() {
     // Lógica para verificar la solución del Sudoku
+    // Otro comentario de prueba
 }
 
 function showPopup(message, isSuccess) {
