@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.screen {
+    text-align: center;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+#sudoku-board {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 1px;
+    margin: 20px 0;
+}
+
+#sudoku-board div {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+#sudoku-board div.grayed {
+    background-color: #ccc;
+    color: #000;
+}
+
+#numeric-keyboard button {
+    margin: 5px;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border: 2px solid #000;
+    text-align: center;
+}

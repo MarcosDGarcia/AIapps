@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUDOKai</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="welcome-screen" class="screen">
+        <h1>Bienvenido a SUDOKai</h1>
+        <button onclick="showDifficultyScreen()">INICIAR</button>
+    </div>
+    <div id="difficulty-screen" class="screen" style="display:none;">
+        <h2>Selecciona la Dificultad</h2>
+        <button onclick="startGame('novato')">Novato</button>
+        <button onclick="startGame('facil')">Fácil</button>
+        <button onclick="startGame('moderado')">Moderado</button>
+        <button onclick="startGame('dificil')">Difícil</button>
+        <button onclick="startGame('experto')">Experto</button>
+        <button onclick="startGame('progresivo')">Progresivo</button>
+    </div>
+    <div id="game-screen" class="screen" style="display:none;">
+        <h2>SUDOKai</h2>
+        <div id="sudoku-board"></div>
+        <div id="numeric-keyboard">
+            <button onclick="selectNumber(1)">1</button>
+            <button onclick="selectNumber(2)">2</button>
+            <button onclick="selectNumber(3)">3</button>
+            <button onclick="selectNumber(4)">4</button>
+            <button onclick="selectNumber(5)">5</button>
+            <button onclick="selectNumber(6)">6</button>
+            <button onclick="selectNumber(7)">7</button>
+            <button onclick="selectNumber(8)">8</button>
+            <button onclick="selectNumber(9)">9</button>
+        </div>
+        <button id="start-button" onclick="startTimer()">INICIAR</button>
+        <div id="timer">05:00</div>
+        <button onclick="checkSolution()">LISTO</button>
+    </div>
+    <div id="popup" class="popup" style="display:none;">
+        <div id="popup-message"></div>
+        <button id="next-button" style="display:none;" onclick="nextLevel()">SIGUIENTE</button>
+        <button id="retry-button" style="display:none;" onclick="retryLevel()">VOLVER A INTENTAR</button>
+        <button onclick="exitGame()">SALIR</button>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
